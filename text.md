@@ -59,7 +59,7 @@ id -Z
     init_t (systemd) , named_t (nameed) , sshd_t (sshd) , syslogd_t (rsyslog) 等々
 - タイプ（ファイル / ディレクトリー / ポート番号）
   - 実行可能ファイル
-    - プロセス名_exec_t
+    - プロセス名_exec_t  
       httpd_exec_t (/usr/sbin/httpd)  
       syslogd_exec_t (/usr/sbin/rsyslogd)
   - 設定ファイル
