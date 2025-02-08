@@ -31,4 +31,17 @@ setstatus
     アクセスチェックおよび制限が無効な状態
 
 - Loaded policy name: ポシリータイプ
-- 
+
+ ### SELinux ユーザー
+
+- SELinux ユーザーの確認
+
+```shell
+semanage user -l
+```
+
+- SELinxu ユーザーと Linux ユーザーのマッピング情報
+
+```shell
+senanage login -l
+```
