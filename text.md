@@ -37,13 +37,13 @@ setstatus
 - SELinux ユーザーの確認
 
 ```shell
-semanage user -l
+sudo semanage user -l
 ```
 
 - SELinxu ユーザーと Linux ユーザーのマッピング情報
 
 ```shell
-senanage login -l
+sudo senanage login -l
 ```
 
 - ユーザーのコンテキスト情報の確認
@@ -86,23 +86,23 @@ SElinuxユーザ:ロール:タイプ:セキュリティレベル:カテゴリ
 - プロセスのタイプは `ps` コマンドに `-e` または `-Z` オプションを指定する
 
 ```shell
-ps -eo label,cmd | grep named | grep -v grep
+sudo ps -eo label,cmd | grep named | grep -v grep
 ```
 
 ```shell
-ps -Z | grep sshd
+sudo ps -Z | grep sshd
 ```
 
 - ファイルやディレクトリーのタイプは `ls` コマンドに `-Z` オプションを指定する
 
 ```shell
-ls -Z /etc/named.conf
+sudo ls -Z /etc/named.conf
 ```
 
 ポートのタイプは `semanage port -l` `で確認できる
 
 ```shell
-semanage port -l | grep dns_port
+sudo semanage port -l | grep dns_port
 ```
 
 - アトリビュート  
@@ -119,9 +119,30 @@ seinfo -a httpd_content_type -x | grep httpd
 seinfo -a domain -x | grep httpd
 ```
 
-### NGINX によるリバースプロキシー
+### SELinux と NGINX によるリバースプロキシー
 
 - [2.4. HTTP トラフィックのリバースプロキシーとしての NGINX の設定 | Web サーバーとリバースプロキシーのデプロイ](https://docs.redhat.com/ja/documentation/red_hat_enterprise_linux/9/html/deploying_web_servers_and_reverse_proxies/configuring-nginx-as-a-reverse-proxy-for-the-http-traffic_setting-up-and-configuring-nginx#configuring-nginx-as-a-reverse-proxy-for-the-http-traffic_setting-up-and-configuring-nginx)
 - [13.3. ブール値 | SELinux ユーザーおよび管理者のガイド](https://docs.redhat.com/ja/documentation/red_hat_enterprise_linux/7/html/selinux_users_and_administrators_guide/sect-managing_confined_services-the_apache_http_server-booleans#sect-Managing_Confined_Services-The_Apache_HTTP_Server-Booleans)
-- 
+
+### ブール値の確認
+
+`seinfo` 以外は現在の設定値が表示される。
+
+- semanage boolean -l
+- getsebool -a
+- gesebool ブール値
+- sestatus -b
+- seinfo -b
+
+```shell
+sudo semanage boolean -l | egrep "SELINUX|zabbix"
+```
+
+```shell
+sudo getsebool -a | grep "zabbix"
+```
+
+```shell
+sesearch -A | grep httpd_can_connect_zabbix
+```
 
