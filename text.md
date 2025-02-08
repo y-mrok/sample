@@ -62,14 +62,14 @@ id -Z
     - プロセス名_exec_t  
       httpd_exec_t (/usr/sbin/httpd)  
       syslogd_exec_t (/usr/sbin/rsyslogd)
-  - 設定ファイル. 
+  - 設定ファイル
     - プロセス名_config_t  
       httpd_config_t (/etc/httpd/conf/httpd.conf)
-  - ログファイル. 
-    - プロセス名_log_t
+  - ログファイル
+    - プロセス名_log_t  
       httpd_log_t (/var/log/httpd/access_log)  
       var_log_t (/var/log/messages)
-  - 公開ファイル. 
+  - 公開ファイル
     - わかりやすい名前_t
       httpd_sys_contetn_t
   - ポート番号
