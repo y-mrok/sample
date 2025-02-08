@@ -45,3 +45,28 @@ semanage user -l
 ```shell
 senanage login -l
 ```
+
+- ユーザーのコンテキスト情報の確認
+
+```shell
+id -Z
+```
+
+### タイプ
+
+- ドメイン
+  - プロセス名_t
+    init_t (systemd) , named_t (nameed) , sshd_t (sshd) , syslogd_t (rsyslog) 等々
+- タイプ（ファイル / ディレクトリー / ポート番号）
+  - 実行可能ファイル
+    - プロセス名_exec_t
+      httpd_exec_t (/usr/sbin/httpd)
+      syslogd_exec_t (/usr/sbin/rsyslogd)
+  - 設定ファイル
+    - プロセス名_config_t
+  - ログファイル
+    - プロセス名_log_t
+  - 公開ファイル
+    - わかりやすい名前_t
+  - ポート番号
+    - サービス名_port_t
