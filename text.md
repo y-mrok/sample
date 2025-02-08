@@ -104,3 +104,13 @@ ls -Z /etc/named.conf
 ```shell
 semanage port -l | grep dns_port
 ```
+
+- アトリビュートに含まれるタイプの確認
+
+```shell
+seinfo -a httpd_content_type -x | grep httpd
+```
+
+```shell
+seinfo -a domain -x | grep httpd
+```
