@@ -121,5 +121,7 @@ seinfo -a domain -x | grep httpd
 
 ### NGINX によるリバースプロキシー
 
-[2.4. HTTP トラフィックのリバースプロキシーとしての NGINX の設定 | Web サーバーとリバースプロキシーのデプロイ](https://docs.redhat.com/ja/documentation/red_hat_enterprise_linux/9/html/deploying_web_servers_and_reverse_proxies/configuring-nginx-as-a-reverse-proxy-for-the-http-traffic_setting-up-and-configuring-nginx#configuring-nginx-as-a-reverse-proxy-for-the-http-traffic_setting-up-and-configuring-nginx)
+- [2.4. HTTP トラフィックのリバースプロキシーとしての NGINX の設定 | Web サーバーとリバースプロキシーのデプロイ](https://docs.redhat.com/ja/documentation/red_hat_enterprise_linux/9/html/deploying_web_servers_and_reverse_proxies/configuring-nginx-as-a-reverse-proxy-for-the-http-traffic_setting-up-and-configuring-nginx#configuring-nginx-as-a-reverse-proxy-for-the-http-traffic_setting-up-and-configuring-nginx)
+- [13.3. ブール値 | SELinux ユーザーおよび管理者のガイド](https://docs.redhat.com/ja/documentation/red_hat_enterprise_linux/7/html/selinux_users_and_administrators_guide/sect-managing_confined_services-the_apache_http_server-booleans#sect-Managing_Confined_Services-The_Apache_HTTP_Server-Booleans)
+- 
 
