@@ -61,7 +61,7 @@ SElinuxユーザ:ロール:タイプ:セキュリティレベル:カテゴリ
 ```
 
 - ドメイン
-  - プロセス名_t
+  - プロセス名_t  
     init_t (systemd) , named_t (nameed) , sshd_t (sshd) , syslogd_t (rsyslog) 等々
 - タイプ（ファイル / ディレクトリー / ポート番号）
   - 実行可能ファイル
