@@ -118,3 +118,8 @@ seinfo -a httpd_content_type -x | grep httpd
 ```shell
 seinfo -a domain -x | grep httpd
 ```
+
+### NGINX によるリバースプロキシー
+
+[2.4. HTTP トラフィックのリバースプロキシーとしての NGINX の設定 | Web サーバーとリバースプロキシーのデプロイ](https://docs.redhat.com/ja/documentation/red_hat_enterprise_linux/9/html/deploying_web_servers_and_reverse_proxies/configuring-nginx-as-a-reverse-proxy-for-the-http-traffic_setting-up-and-configuring-nginx#configuring-nginx-as-a-reverse-proxy-for-the-http-traffic_setting-up-and-configuring-nginx)
+
