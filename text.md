@@ -60,7 +60,7 @@ id -Z
 - タイプ（ファイル / ディレクトリー / ポート番号）
   - 実行可能ファイル
     - プロセス名_exec_t
-      httpd_exec_t (/usr/sbin/httpd)
+      httpd_exec_t (/usr/sbin/httpd)  
       syslogd_exec_t (/usr/sbin/rsyslogd)
   - 設定ファイル
     - プロセス名_config_t
