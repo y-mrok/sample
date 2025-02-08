@@ -70,7 +70,7 @@ id -Z
       httpd_log_t (/var/log/httpd/access_log)  
       var_log_t (/var/log/messages)
   - 公開ファイル
-    - わかりやすい名前_t
+    - わかりやすい名前_t  
       httpd_sys_contetn_t
   - ポート番号
     - サービス名_port_t  
