@@ -54,6 +54,12 @@ id -Z
 
 ### タイプ
 
+- コンテキストのフォーマット
+
+```text
+SElinuxユーザ:ロール:タイプ:セキュリティレベル:カテゴリ
+```
+
 - ドメイン
   - プロセス名_t
     init_t (systemd) , named_t (nameed) , sshd_t (sshd) , syslogd_t (rsyslog) 等々
@@ -77,3 +83,24 @@ id -Z
       dns_port_t (tcp/53 , udp/53 等)  
       ftp_data_port_t (tcp/20, udp/68 等)
 
+- プロセスのタイプは `ps` コマンドに `-e` または `-Z` オプションを指定する
+
+```shell
+ps -eo label,cmd | grep named | grep -v grep
+```
+
+```shell
+ps -Z | grep sshd
+```
+
+- ファイルやディレクトリーのタイプは `ls` コマンドに `-Z` オプションを指定する
+
+```shell
+ls -Z /etc/named.conf
+```
+
+ポートのタイプは `semanage port -l` `で確認できる
+
+```shell
+semanage port -l | grep dns_port
+```
