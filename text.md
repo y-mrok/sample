@@ -105,7 +105,7 @@ ls -Z /etc/named.conf
 semanage port -l | grep dns_port
 ```
 
-- アトリビュート
+- アトリビュート  
   ドメインやタイプのラベルをグループ化したもの
 
 - アトリビュートに含まれるタイプの確認
