@@ -146,3 +146,18 @@ sudo getsebool -a | grep "zabbix"
 sesearch -A | grep httpd_can_connect_zabbix
 ```
 
+### SELInux の設定
+
+#### permissive モード
+
+1. `/etc/selinux/config` ファイル内の `SELINUX=` に `permissive` を設定する
+
+   ```none
+   SELINUX=permissive
+   ```
+
+2. システムを再起動する
+
+   ```none
+   reboot
+   ```
