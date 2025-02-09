@@ -161,3 +161,11 @@ sesearch -A | grep httpd_can_connect_zabbix
    ```none
    reboot
    ```
+
+- [2.2. SELinux の Permissive モードへの変更](https://docs.redhat.com/ja/documentation/red_hat_enterprise_linux/9/html/using_selinux/changing-to-permissive-mode_changing-selinux-states-and-modes#changing-to-permissive-mode_changing-selinux-states-and-modes)
+- [2.2. SELinux の Permissive モードへの変更](https://docs.redhat.com/ja/documentation/red_hat_enterprise_linux/9/html-single/using_selinux/index#changing-to-permissive-mode_changing-selinux-states-and-modes)
+- [SELinuxの状態を確認する](https://zenn.dev/ishikawa84g/articles/1f8c3286c162dc1d985f)
+- [SELinuxについてまとめてみる2（少し実践編）](https://zenn.dev/motisan/articles/20230104_selinux2)
+- [SELinuxについてまとめてみる3（動作検証編）](https://zenn.dev/motisan/articles/20230107_selinux3)
+- [Red Hat Enterprise Linux で SELinux を無効にする方法](https://access.redhat.com/ja/solutions/225423)
+- [2.5. SELinux の無効化](https://docs.redhat.com/ja/documentation/red_hat_enterprise_linux/9/html/using_selinux/enabling_and_disabling_selinux-disabling_selinux_changing-selinux-states-and-modes)
