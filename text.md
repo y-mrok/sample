@@ -169,3 +169,35 @@ sesearch -A | grep httpd_can_connect_zabbix
 - [SELinuxについてまとめてみる3（動作検証編）](https://zenn.dev/motisan/articles/20230107_selinux3)
 - [Red Hat Enterprise Linux で SELinux を無効にする方法](https://access.redhat.com/ja/solutions/225423)
 - [2.5. SELinux の無効化](https://docs.redhat.com/ja/documentation/red_hat_enterprise_linux/9/html/using_selinux/enabling_and_disabling_selinux-disabling_selinux_changing-selinux-states-and-modes)
+
+### SELinux のコマンド
+
+`ls` コマンドに `-Z` オプションを付加すると、ファイルやファイルやディレクトリのコンテキストを確認できる。
+
+```shell
+ls -Z /etc/passwd
+```
+
+ファイルを移動する時，-Zオプションを付けなければ，ファイルのコンテキストは移動しても変わならい。しかし，-Zオプションを付加することで，ファイルのコンテキストを移動先のラベリングルールに従い変更させることができる。
+
+```shell
+sudo mv -Z /tmp/test.txt /var/log/
+```
+
+cpコマンドでは，ファイルのコンテキストは移動先のラベリングルールに従い変更される。
+
+```shell
+sudo cp /tmp/test.txt /var/log/
+```
+
+psコマンドにオプションの -Z を付加することで，起動しているプロセスのコンテキストを確認することができる。
+
+```shell
+sudo ps -eZ | grep "httpd"
+```
+
+idコマンドでは，-Zを付けなくてもログインユーザのコンテキストの確認ができる。
+
+```shell
+id -Z
+```
